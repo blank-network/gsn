@@ -123,7 +123,7 @@ export async function getEip712Signature<T extends MessageTypes> (
       method = web3.currentProvider.send
     }
     const paramBlock = {
-      method: `eth_signTypedData${methodSuffix}`,
+      method: 'eth_signTypedData' + methodSuffix,
       params: [senderAddress, dataToSign],
       jsonrpc: '2.0',
       id: Date.now()
